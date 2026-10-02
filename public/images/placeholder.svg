@@ -1,0 +1,13 @@
+<svg
+  aria-label="Placeholder illustration"
+  height="600"
+  role="img"
+  viewBox="0 0 800 600"
+  width="800"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <rect fill="#f4f4f5" height="600" width="800" />
+  <circle cx="560" cy="210" fill="#e4e4e7" r="110" />
+  <path d="M0 470 190 300l130 120 150-170 330 250v80H0z" fill="#d4d4d8" />
+  <path d="M0 520 240 380l150 100 140-110 270 190v40H0z" fill="#a1a1aa" />
+</svg>

@@ -1,0 +1,20 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": [
+    "ultracite/biome/core",
+    "ultracite/biome/react",
+    "ultracite/biome/next"
+  ],
+  "overrides": [
+    {
+      // shadcn/ui components are kept close to upstream so they stay easy to update.
+      "includes": ["src/components/ui/**"],
+      "linter": {
+        "rules": {
+          "a11y": { "noLabelWithoutControl": "off" },
+          "suspicious": { "noLeakedRender": "off" }
+        }
+      }
+    }
+  ]
+}

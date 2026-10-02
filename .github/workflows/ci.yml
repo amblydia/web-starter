@@ -1,0 +1,24 @@
+name: CI
+
+# Reuses Amblydia's shared Docker validation workflow. The `checks` stage of the
+# Dockerfile runs `bun run check` (Ultracite + tsc), then the production image
+# is built, which runs `bun run build`. Nothing is pushed or deployed.
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    uses: Amblydia/github-actions/.github/workflows/docker-pr.yml@main
+    with:
+      test-target: checks

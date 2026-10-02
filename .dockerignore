@@ -1,0 +1,32 @@
+# Dependencies and build output
+node_modules
+.next
+out
+coverage
+*.tsbuildinfo
+
+# Version control and CI
+.git
+.gitignore
+.github
+
+# Local environment files (never bake secrets into an image)
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editors and OS files
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+
+# Docker files themselves and docs not needed at build time
+Dockerfile
+.dockerignore
+*.md
+!README.md
